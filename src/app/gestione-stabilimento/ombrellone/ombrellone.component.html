@@ -1,0 +1,11 @@
+<div class="ombrellone-container">
+  <p>Ombrellone {{ numeroOmbrellone }}</p>
+  <p>Stato: {{ occupato ? 'Occupato' : 'Libero' }}</p>
+  <p *ngIf="occupato">Cliente: {{ cliente }}</p>
+  <div *ngIf="!occupato">
+    <input type="text" [(ngModel)]="numeroInput" placeholder="Numero dell'ombrellone">
+    <input type="text" [(ngModel)]="cliente" placeholder="Nome del cliente">
+    <button (click)="prenotazione()">Prenota</button>
+  </div>
+  <button *ngIf="occupato" (click)="liberaPosto()">Libera</button>
+</div>

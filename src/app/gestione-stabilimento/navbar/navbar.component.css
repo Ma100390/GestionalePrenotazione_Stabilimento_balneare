@@ -1,0 +1,14 @@
+/* navbar.component.css */
+
+/* Stili per il titolo */
+.titolo {
+    text-align: center; /* Allinea il testo al centro */
+    color: rgb(45, 110, 194); /* Cambia il colore del testo in blu */
+    font-size: 24px; /* Imposta la dimensione del font a 24px */
+    margin: 10px 0; /* Imposta un margine di 10px sopra e sotto il titolo */
+    font-weight: bold; /* Imposta il font in grassetto */
+    border: 1px solid rgb(233, 206, 206);
+    border-radius: 10px;
+    background-color: rgb(237, 238, 238);
+  }
+  

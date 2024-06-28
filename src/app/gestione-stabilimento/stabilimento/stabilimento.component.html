@@ -1,0 +1,25 @@
+
+<div class="stabilimento-container">
+
+  <div>
+    <div class="ombrellone-container">
+      <input type="number" [(ngModel)]="numeroOmbrelloneInput" placeholder="Numero dell'ombrellone">
+      <input type="text" [(ngModel)]="cliente" placeholder="Nome del cliente">
+      <button (click)="prenotaOmbrellone()">Prenota</button>
+    </div>
+  </div>
+  <div>
+    <div class="ombrellone-container" *ngFor="let ombrellone of ombrelloni">
+      <div>
+        N°{{ ombrellone.numeroOmbrellone }} il posto è {{ ombrellone.occupato ? 'Occupato' : 'Libero' }}
+      </div>
+      <app-ombrellone
+        *ngIf="prenotato && ombrellone.occupato"
+        [numeroOmbrellone]="ombrellone.numeroOmbrellone"
+        [occupato]="ombrellone.occupato"
+        [cliente]="ombrellone.cliente"
+        (libera)="liberaOmbrellone(ombrellone)">
+      </app-ombrellone>
+    </div>
+  </div>
+</div>
